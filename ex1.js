@@ -1,7 +1,7 @@
 #! /usr/bin/env node
 
 "use strict";
-const util =  require("util");
+
 const path = require("path");
 const fs = require("fs");
 const getStdin = require("get-stdin");
@@ -45,7 +45,7 @@ function processAsyncFile (filename) {
     if (err) return error(err);
     const UppercaseContents = contents.toString().toUpperCase();
     process.stdout.write(UppercaseContents);
-  }) // content is a buffer, which can be seen by using console.log  
+  }) // content is a buffer, which can be seen by using console.log
 }
 
 if (args.help) {
@@ -57,7 +57,7 @@ if (args.help) {
   //   return;
   // }
   return console.log('no file at this path: ' + filename);
-  
+
   // console.log(__dirname)
 } else if (args.in) {
   getStdin()
